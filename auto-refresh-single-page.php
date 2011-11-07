@@ -11,9 +11,14 @@
 * Version: 1.0
 */
 
-
+/*******************************************************************************
+** arspAddRefreshOptionBox()
+**
+** Add metabox for selector on pages
+**
+** @since 1.0
+*******************************************************************************/
 function arspAddRefreshOptionBox() {
-	/* Add metabox for selector on pages */
 	add_meta_box(
 		'arspRefreshOptionsBox',
 		'Auto Refresh Single Page',
@@ -34,6 +39,13 @@ function arspAddRefreshOptionBox() {
 	
 }
 
+/*******************************************************************************
+** arspAddRefreshMetaTag()
+**
+** Add the refresh meta tag to the page, where the magic happens
+**
+** @since 1.0
+*******************************************************************************/
 function arspAddRefreshMetaTag() {
 	global $post;
 	
@@ -47,6 +59,13 @@ function arspAddRefreshMetaTag() {
 	}
 }
 
+/*******************************************************************************
+** arspRefreshOptionsBox()
+**
+** Output the refresh meta box
+**
+** @since 1.0
+*******************************************************************************/
 function arspRefreshOptionsBox() {
 	global $post;
 	
@@ -58,6 +77,15 @@ function arspRefreshOptionsBox() {
 	echo '<p class="description">Blank or 0 for no refresh.</p>';
 }
 
+/*******************************************************************************
+** arspSaveRefreshOptions()
+**
+** Save the refresh option for the post
+**
+** @param $post_id - the post's ID
+**
+** @since 1.0
+*******************************************************************************/
 function arspSaveRefreshOptions($post_id) {
 	global $post;
 	
@@ -94,7 +122,7 @@ function arspSaveRefreshOptions($post_id) {
 **
 ** Initialize the plugin
 **
-** @since 0.1
+** @since 1.0
 *******************************************************************************/
 function initRefreshSinglePage() {
 	/* Add code to generated page if req. */
